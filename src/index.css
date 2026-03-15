@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom color palette */
+  --color-navy: #003049;
+  --color-navy-dark: #001d2e;
+  --color-red: #D62828;
+  --color-orange: #F77F00;
+  --color-gold: #FCBF49;
+  --color-cream: #EAE2B7;
+  --color-cream-light: #f5f0e1;
+
+  /* Font families */
+  --font-heading: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Keyframe animation: gold underline sweep */
+  --animate-underline-sweep: underline-sweep 1.2s ease-out forwards;
+}
+
+@keyframes underline-sweep {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-navy);
+  color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}

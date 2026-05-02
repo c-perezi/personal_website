@@ -1,16 +1,19 @@
 import { useState } from "react";
-import { projects } from "../data/content";
+import { projects, featureFlags } from "../data/content";
 import filterProjects from "../utils/filterProjects";
 import ProjectCard from "./ProjectCard";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
-const tabs = [
+const allTabs = [
   { key: "devops", label: "DevOps" },
   { key: "ai", label: "AI" },
 ];
 
 function Projects() {
-  const [activeTab, setActiveTab] = useState("devops");
+  const tabs = featureFlags.showDevOpsProjects
+    ? allTabs
+    : allTabs.filter((t) => t.key !== "devops");
+  const [activeTab, setActiveTab] = useState(tabs[0].key);
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
   const filtered = filterProjects(projects, activeTab);
 

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import { featureFlags } from './data/content';
 
 const Skills = lazy(() => import('./components/Skills'));
 const Projects = lazy(() => import('./components/Projects'));
@@ -19,7 +20,7 @@ function App() {
           <Skills />
           <Projects />
           <Experience />
-          <Thoughts />
+          {featureFlags.showThoughts && <Thoughts />}
           <Contact />
         </Suspense>
       </main>

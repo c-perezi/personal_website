@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { hero } from "../data/content";
+import PixelDino from "./PixelDino";
 
 function Hero() {
   const handleCTAClick = useCallback((e) => {
@@ -13,7 +14,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-4 pt-16"
+      className="relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden"
     >
       <div className="max-w-3xl text-center">
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-4">
@@ -41,6 +42,30 @@ function Hero() {
         >
           {hero.ctaText}
         </a>
+      </div>
+
+      {/* Pixelated dino herd walking across the bottom */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        {/* Lead dino — large green, bottom */}
+        <div className="absolute bottom-6 left-0">
+          <PixelDino color="#4ade80" pixel={4} duration={9} delay={0} />
+        </div>
+        {/* Orange dino — mid-size, slightly higher, faster */}
+        <div className="absolute bottom-14 left-0">
+          <PixelDino color="#F77F00" pixel={3} duration={7} delay={2} />
+        </div>
+        {/* Gold dino — small, higher up, staggered */}
+        <div className="absolute bottom-24 left-0">
+          <PixelDino color="#FCBF49" pixel={2} duration={11} delay={5} frameSpeed={280} />
+        </div>
+        {/* Red dino — going the other way */}
+        <div className="absolute bottom-10 left-0">
+          <PixelDino color="#D62828" pixel={3} duration={10} delay={3} reverse />
+        </div>
+        {/* Tiny cream dino — high up, slow */}
+        <div className="absolute bottom-32 left-0">
+          <PixelDino color="#EAE2B7" eyeColor="#003049" pixel={2} duration={13} delay={7} frameSpeed={400} />
+        </div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ function Footer() {
         &copy; {year} All rights reserved.
       </p>
       <p className="text-gold text-xs mt-2">
-        Built with React &amp; Tailwind
+         Hecho con ❤️ en 🇵🇷
       </p>
     </footer>
   );

@@ -1,7 +1,7 @@
 // Hero content
 export const hero = {
   name: "Carla N. Pérez",
-  title: "Software Engineer | DevOps Specialist",
+  title: "Cloud Platform Engineer | DevOps Specialist",
   intro:
     "I build boring systems. Passionate about automation, cloud-native architecture, and developer empowerment.",
   ctaText: "Let's chat",
@@ -30,54 +30,50 @@ export const skills = [
 // Projects
 export const projects = [
   {
-    id: "proj-1",
-    title: "Multi-Region Terraform Platform",
+    id: "proj-5",
+    title: "Python vs NumPy Performance Benchmarking",
     description:
-      "Designed and deployed a multi-region AWS infrastructure using Terraform modules with automated drift detection and self-healing capabilities.",
-    category: "devops",
-    tags: ["Terraform", "AWS", "Python"],
-    link: "https://github.com/alexmorgan/terraform-platform",
-    image: "/projects/terraform-platform.webp",
-  },
-  {
-    id: "proj-2",
-    title: "Zero-Downtime CI/CD Pipeline",
-    description:
-      "Built a blue-green deployment pipeline with GitHub Actions and ArgoCD, achieving zero-downtime releases for a microservices architecture.",
-    category: "devops",
-    tags: ["GitHub Actions", "ArgoCD", "Kubernetes"],
-    link: "https://github.com/alexmorgan/cicd-pipeline",
-    image: "/projects/cicd-pipeline.webp",
-  },
-  {
-    id: "proj-3",
-    title: "ML Model Serving Infrastructure",
-    description:
-      "Created a scalable model serving platform on AWS SageMaker with automated retraining pipelines and A/B testing capabilities.",
+      "Benchmarked element-wise and matrix multiplication in pure Python vs NumPy across multiple array dimensions, visualizing the dramatic speedup from vectorized C routines.",
     category: "ai",
-    tags: ["AWS SageMaker", "Python", "Docker"],
-    link: "https://github.com/alexmorgan/ml-serving",
-    image: "/projects/ml-serving.webp",
+    tags: ["Python", "NumPy", "Matplotlib", "Benchmarking"],
+    link: "https://github.com/c-perezi/artificial-intelligence-portfolio/tree/main/01_python_performance",
   },
   {
-    id: "proj-4",
-    title: "Log Anomaly Detection System",
+    id: "proj-6",
+    title: "Intelligent Agents — Vacuum World Simulator",
     description:
-      "Developed an AI-powered log analysis tool that detects anomalies in real-time using transformer models and streams alerts to Slack.",
+      "Built a PEAS-based environment simulator for the vacuum-cleaner world, comparing deterministic reflex, randomized reflex, and stateful agents across unknown grid environments.",
     category: "ai",
-    tags: ["Python", "TensorFlow", "ELK Stack"],
-    link: "https://github.com/alexmorgan/log-anomaly",
-    image: "/projects/log-anomaly.webp",
+    tags: ["Python", "AIMA", "Agent Design", "PEAS"],
+    link: "https://github.com/c-perezi/artificial-intelligence-portfolio/tree/main/02_Agents",
+  },
+  {
+    id: "proj-7",
+    title: "N-Queens Local Search Comparison",
+    description:
+      "Compared hill climbing, random-restart hill climbing, and simulated annealing on the 8-Queens puzzle, demonstrating why escape mechanisms are critical for local search.",
+    category: "ai",
+    tags: ["Python", "AIMA", "Local Search", "Simulated Annealing"],
+    link: "https://github.com/c-perezi/artificial-intelligence-portfolio/tree/main/04_8Queens",
   },
 ];
 
 // Experience entries (ordered newest first)
 export const experience = [
   {
+    id: "exp-0",
+    company: "Banco Popular de Puerto Rico",
+    role: "Cloud Platform Engineer",
+    period: "2026 - Present",
+    description:
+      "Design and operate cloud platform infrastructure to support enterprise-scale projects.",
+    technologies: ["Terraform", "GitLab CI"],
+  },
+  {
     id: "exp-1",
     company: "Banco Popular de Puerto Rico",
     role: "Software Engineer | Pipelines Engineering",
-    period: "2023 - Present",
+    period: "2023 - 2026",
     description:
       "Developed CI/CD pipelines, infrastructure automation and platform engineering for a Puerto Rico's primary financial application, serving 2M+ users, and supported enterprise-wide automation. Part of the bank's first Software Engineering Associates cohort.",
     technologies: ["AWS", "Terraform", "Jenkins", "Java", "React"],
@@ -135,18 +131,22 @@ export const thoughts = [
 
 // Contact / social links
 export const contact = {
-  email: "alex@example.com",
   social: [
     {
       platform: "GitHub",
-      url: "https://github.com/alexmorgan",
+      url: "https://github.com/c-perezi",
       icon: "github",
     },
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com/in/alexmorgan",
+      url: "https://linkedin.com/in/cnperez",
       icon: "linkedin",
     },
+    {
+      platform: "Calendly", 
+      url: "https://calendly.com/c-perezi", 
+      icon: "calendly"
+    }
   ],
 };
 
@@ -159,3 +159,9 @@ export const navLinks = [
   { label: "Thoughts", href: "#thoughts" },
   { label: "Contact", href: "#contact" },
 ];
+// Feature flags
+export const featureFlags = {
+  showDevOpsProjects: false,
+  showThoughts: false,
+};
+

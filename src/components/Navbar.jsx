@@ -1,13 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
-import { navLinks } from "../data/content";
+import { navLinks, featureFlags } from "../data/content";
+
+const visibleLinks = navLinks.filter((link) => {
+  if (link.href === "#thoughts" && !featureFlags.showThoughts) return false;
+  return true;
+});
 
 function Navbar() {
-  const [activeSection, setActiveSection] = useState(navLinks[0]?.href.slice(1) || "");
+  const [activeSection, setActiveSection] = useState(visibleLinks[0]?.href.slice(1) || "");
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Track active section via IntersectionObserver
   useEffect(() => {
-    const sectionIds = navLinks.map((link) => link.href.slice(1));
+    const sectionIds = visibleLinks.map((link) => link.href.slice(1));
     const observers = [];
 
     const observer = new IntersectionObserver(
@@ -58,12 +63,12 @@ function Navbar() {
           onClick={(e) => handleClick(e, "#hero")}
           className="font-heading text-lg font-bold text-orange"
         >
-          AM
+          Programming Portfolio
         </a>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
-          {navLinks.map((link) => {
+          {visibleLinks.map((link) => {
             const sectionId = link.href.slice(1);
             const isActive = activeSection === sectionId;
             return (
@@ -113,7 +118,7 @@ function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <ul className="md:hidden bg-navy-dark border-t border-navy list-none m-0 p-0">
-          {navLinks.map((link) => {
+          {visibleLinks.map((link) => {
             const sectionId = link.href.slice(1);
             const isActive = activeSection === sectionId;
             return (

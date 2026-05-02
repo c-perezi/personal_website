@@ -16,6 +16,9 @@
 
   /* Keyframe animation: gold underline sweep */
   --animate-underline-sweep: underline-sweep 1.2s ease-out forwards;
+
+  /* Dino walk animation */
+  --animate-dino-walk: dino-walk 8s linear infinite;
 }
 
 @keyframes underline-sweep {
@@ -29,6 +32,15 @@
   100% {
     width: 100%;
     opacity: 1;
+  }
+}
+
+@keyframes dino-walk {
+  0% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 80px));
   }
 }
 

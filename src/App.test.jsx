@@ -67,15 +67,19 @@ describe('App', () => {
     const skills = await screen.findByTestId('skills');
     const projects = await screen.findByTestId('projects');
     const experience = await screen.findByTestId('experience');
-    const thoughts = await screen.findByTestId('thoughts');
     const contact = await screen.findByTestId('contact');
     const footer = await screen.findByTestId('footer');
 
     expect(skills).toBeTruthy();
     expect(projects).toBeTruthy();
     expect(experience).toBeTruthy();
-    expect(thoughts).toBeTruthy();
     expect(contact).toBeTruthy();
     expect(footer).toBeTruthy();
+  });
+
+  it('hides Thoughts section when showThoughts flag is false', async () => {
+    render(<App />);
+    await screen.findByTestId('skills'); // wait for lazy sections to resolve
+    expect(screen.queryByTestId('thoughts')).toBeNull();
   });
 });

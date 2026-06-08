@@ -17,10 +17,11 @@ function App() {
       <main>
         <Hero />
         <Suspense fallback={<div className="h-screen" />}>
-          <Skills />
           <Projects />
-          <Experience />
           {featureFlags.showThoughts && <Thoughts />}
+          <Experience />
+          <Skills />
+          
           <Contact />
         </Suspense>
       </main>

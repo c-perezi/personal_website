@@ -77,9 +77,9 @@ describe('App', () => {
     expect(footer).toBeTruthy();
   });
 
-  it('hides Thoughts section when showThoughts flag is false', async () => {
+  it('renders Thoughts section when showThoughts flag is true', async () => {
     render(<App />);
-    await screen.findByTestId('skills'); // wait for lazy sections to resolve
-    expect(screen.queryByTestId('thoughts')).toBeNull();
+    const thoughts = await screen.findByTestId('thoughts');
+    expect(thoughts).toBeTruthy();
   });
 });

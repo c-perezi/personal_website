@@ -26,6 +26,7 @@ function Thoughts() {
               excerpt={thought.excerpt}
               date={thought.date}
               readTime={thought.readTime}
+              content={thought.content}
               link={thought.link}
             />
           ))}

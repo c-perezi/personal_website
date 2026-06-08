@@ -56,6 +56,24 @@ export const projects = [
     tags: ["Python", "AIMA", "Local Search", "Simulated Annealing"],
     link: "https://github.com/c-perezi/artificial-intelligence-portfolio/tree/main/04_8Queens",
   },
+  {
+    id: "proj-8",
+    title: "Connect 4 — Adversarial AI",
+    description:
+      "Implemented and compared AI agents for Connect 4: a random agent, a heuristic agent, and Minimax with Alpha-Beta pruning. Includes tournament evaluation and human vs AI gameplay.",
+    category: "ai",
+    tags: ["Python", "Minimax", "Alpha-Beta Pruning", "Game AI"],
+    link: "https://github.com/c-perezi/artificial-intelligence-portfolio/tree/main/05_adversarial_search",
+  },
+  {
+    id: "proj-9",
+    title: "Zebra Puzzle — Constraint Satisfaction",
+    description:
+      "Solved the classic Zebra logic puzzle (Houses puzzle) using constraint satisfaction techniques, determining where the zebra lives and who drinks water from a set of 15 clues.",
+    category: "ai",
+    tags: ["Python", "CSP", "Constraint Satisfaction", "AIMA"],
+    link: "https://github.com/c-perezi/artificial-intelligence-portfolio/tree/main/06_csp",
+  },
 ];
 
 // Experience entries (ordered newest first)
@@ -63,7 +81,7 @@ export const experience = [
   {
     id: "exp-0",
     company: "Banco Popular de Puerto Rico",
-    role: "Cloud Platform Engineer",
+    role: "Cloud Platform Engineer | Cloud Delivery & Engineering | Pipelines Engineering ",
     period: "2026 - Present",
     description:
       "Design and operate cloud platform infrastructure to support enterprise-scale projects.",
@@ -72,7 +90,7 @@ export const experience = [
   {
     id: "exp-1",
     company: "Banco Popular de Puerto Rico",
-    role: "Software Engineer | Pipelines Engineering",
+    role: "Software Engineer | Digital Banking Engineering | Systems Engineering",
     period: "2023 - 2026",
     description:
       "Developed CI/CD pipelines, infrastructure automation and platform engineering for a Puerto Rico's primary financial application, serving 2M+ users, and supported enterprise-wide automation. Part of the bank's first Software Engineering Associates cohort.",
@@ -99,33 +117,37 @@ export const experience = [
 ];
 
 // Thoughts / articles
+import llmsAndIntelligence from "../content/thoughts/llms-and-intelligence.md?raw";
+import llmLimitations from "../content/thoughts/llm-limitations.md?raw";
+import reflectionKeyExperiences from "../content/thoughts/reflection-key-experiences.md?raw";
+
 export const thoughts = [
   {
     id: "thought-1",
-    title: "Why Infrastructure as Code Changed Everything",
+    title: "How My View of AI as \"Intelligence\" Changed",
     excerpt:
-      "A deep dive into how treating infrastructure as code transformed our deployment reliability and team velocity.",
-    date: "2024-08-12",
-    readTime: "6 min read",
-    link: "/blog/infrastructure-as-code",
+      "A brief reflection of my view of AI across the semester.",
+    date: "2025-06-01",
+    readTime: "~2 min read",
+    content: llmsAndIntelligence,
   },
   {
     id: "thought-2",
-    title: "The Art of Zero-Downtime Deployments",
+    title: "What Limitations of LLMs Became Evident",
     excerpt:
-      "Lessons learned from implementing blue-green and canary deployment strategies at scale.",
-    date: "2024-05-20",
-    readTime: "8 min read",
-    link: "/blog/zero-downtime-deployments",
+      "Fluency is not reasoning.",
+    date: "2025-06-01",
+    readTime: "~2 min read",
+    content: llmLimitations,
   },
   {
     id: "thought-3",
-    title: "Monitoring That Actually Matters",
+    title: "Reflection on Key Course Experiences",
     excerpt:
-      "How to build observability into your systems without drowning in alerts and dashboards.",
-    date: "2024-02-10",
-    readTime: "5 min read",
-    link: "/blog/monitoring-that-matters",
+      "The midterm, the debate on AI and intelligence, and what I'm taking away from ICOM5015.",
+    date: "2025-06-01",
+    readTime: "~3 min read",
+    content: reflectionKeyExperiences,
   },
 ];
 
@@ -162,6 +184,6 @@ export const navLinks = [
 // Feature flags
 export const featureFlags = {
   showDevOpsProjects: false,
-  showThoughts: false,
+  showThoughts: true,
 };
 

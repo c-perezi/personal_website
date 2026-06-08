@@ -226,12 +226,12 @@ export const contact = {
 
 // Navigation links
 export const navLinks = [
-  { label: "About", href: "#hero" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
+  { label: "About",      href: "#hero" },
+  { label: "Projects",   href: "#projects" },
+  { label: "Thoughts",   href: "#thoughts" },
   { label: "Experience", href: "#experience" },
-  { label: "Thoughts", href: "#thoughts" },
-  { label: "Contact", href: "#contact" },
+  { label: "Skills",     href: "#skills" },
+  { label: "Contact",    href: "#contact" },
 ];
 // Feature flags
 export const featureFlags = {

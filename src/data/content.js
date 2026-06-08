@@ -139,13 +139,48 @@ export const experience = [
 import llmsAndIntelligence from "../content/thoughts/llms-and-intelligence.md?raw";
 import llmLimitations from "../content/thoughts/llm-limitations.md?raw";
 import reflectionKeyExperiences from "../content/thoughts/reflection-key-experiences.md?raw";
+import courseOverview from "../content/thoughts/course-overview.md?raw";
+import essaysAndForums from "../content/thoughts/essays-and-forums.md?raw";
+import teamwork from "../content/thoughts/teamwork.md?raw";
+import selfAssessment from "../content/thoughts/self-assessment.md?raw";
 
 export const thoughts = [
   {
+    id: "thought-overview",
+    title: "Course Overview",
+    excerpt: "Introduction to the portfolio and how the course outcomes connect to my learning goals.",
+    date: "2025-06-01",
+    readTime: "~2 min read",
+    content: courseOverview,
+  },
+  {
+    id: "thought-essays",
+    title: "Essays and Forums",
+    excerpt: "My essay on AI as real intelligence, forum contributions, and what the discussions surfaced.",
+    date: "2025-06-01",
+    readTime: "~3 min read",
+    content: essaysAndForums,
+  },
+  {
+    id: "thought-teamwork",
+    title: "Teamwork and Collaboration",
+    excerpt: "Lessons learned from group demos and assignments — and what collaboration added to my learning.",
+    date: "2025-06-01",
+    readTime: "~2 min read",
+    content: teamwork,
+  },
+  {
+    id: "thought-self",
+    title: "Self-Assessment",
+    excerpt: "An honest look at how well I achieved the course outcomes and where I still have room to grow.",
+    date: "2025-06-01",
+    readTime: "~3 min read",
+    content: selfAssessment,
+  },
+  {
     id: "thought-1",
     title: "How My View of AI as \"Intelligence\" Changed",
-    excerpt:
-      "A brief reflection of my view of AI across the semester.",
+    excerpt: "A brief reflection of my view of AI across the semester.",
     date: "2025-06-01",
     readTime: "~2 min read",
     content: llmsAndIntelligence,
@@ -153,8 +188,7 @@ export const thoughts = [
   {
     id: "thought-2",
     title: "What Limitations of LLMs Became Evident",
-    excerpt:
-      "Fluency is not reasoning.",
+    excerpt: "Fluency is not reasoning.",
     date: "2025-06-01",
     readTime: "~2 min read",
     content: llmLimitations,
@@ -162,8 +196,7 @@ export const thoughts = [
   {
     id: "thought-3",
     title: "Reflection on Key Course Experiences",
-    excerpt:
-      "The midterm, the debate on AI and intelligence, and what I'm taking away from ICOM5015.",
+    excerpt: "The midterm, the debate on AI and intelligence, and what I'm taking away from ICOM5015.",
     date: "2025-06-01",
     readTime: "~3 min read",
     content: reflectionKeyExperiences,

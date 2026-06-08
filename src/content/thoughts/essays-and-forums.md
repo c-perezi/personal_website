@@ -4,7 +4,7 @@
 
 ### Essay: Is AI Real Intelligence That Is Artificial?
 
-This essay explored the intersection of tech and philosphy, and it did so by wondering if AI is real intelligence that i artificial. As part of the essay, opposing views had to be considered, so key points across the spectrum were considered. 
+This essay explored the intersection of tech and philosphy, and it did so by wondering if AI is real intelligence that is artificial. As part of the essay, opposing views had to be considered, so key points across the spectrum were considered. 
 
 **Key points I argued:**
 - *AI _is_ true intelligence*. It involves socio-linguistic programming, adheres to institutional ideals, and rejects the idea that intelligence resides as a single unit. 

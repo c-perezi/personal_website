@@ -130,7 +130,7 @@ export const experience = [
     role: "Bachelor of Science in Pure Mathematics, minor in Economics",
     period: "2016 - 2022",
     description:
-      "A time to learn how to learn hard stuff and enjoy the process. Foundational period in developing a growth-mindset.",
+      "Foundational period in developing a growth-mindset.",
     technologies: ["Calculus", "Differential Equations", "Abstract Algebra", "Resilience"],
   },
 ];

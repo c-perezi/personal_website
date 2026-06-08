@@ -1,70 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom color palette */
-  --color-navy: #003049;
+  /* Light mode design system */
+  --color-bg:        #FAFAFA;       /* page background */
+  --color-surface:   #FFFFFF;       /* card / panel surface */
+  --color-border:    #E5E7EB;       /* hairline borders */
+  --color-text:      #111827;       /* primary text */
+  --color-muted:     #6B7280;       /* secondary / meta text */
+  --color-subtle:    #F3F4F6;       /* badge / tag background */
+  --color-accent:    #4F46E5;       /* indigo accent */
+  --color-accent-hover: #4338CA;    /* accent hover */
+  --color-danger:    #DC2626;       /* form errors */
+  --color-success:   #16A34A;       /* form success */
+
+  /* Keep legacy names so PixelDino raw color values still work */
+  --color-navy:      #003049;
   --color-navy-dark: #001d2e;
-  --color-red: #D62828;
-  --color-orange: #F77F00;
-  --color-gold: #FCBF49;
-  --color-cream: #EAE2B7;
-  --color-cream-light: #f5f0e1;
 
   /* Font families */
   --font-heading: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Inter",  ui-sans-serif, system-ui, sans-serif;
 
-  /* Keyframe animation: gold underline sweep */
-  --animate-underline-sweep: underline-sweep 1.2s ease-out forwards;
-
-  /* Dino walk animation */
+  /* Animations */
+  --animate-underline-sweep: underline-sweep 0.8s ease-out forwards;
   --animate-dino-walk: dino-walk 8s linear infinite;
 }
 
 @keyframes underline-sweep {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
+  0%   { width: 0; opacity: 0; }
+  50%  { opacity: 1; }
+  100% { width: 100%; opacity: 1; }
 }
 
 @keyframes dino-walk {
-  0% {
-    transform: translateX(-80px);
-  }
-  100% {
-    transform: translateX(calc(100vw + 80px));
-  }
+  0%   { transform: translateX(-80px); }
+  100% { transform: translateX(calc(100vw + 80px)); }
 }
 
-/* Base styles */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: var(--font-body);
-  background-color: var(--color-navy);
-  color: var(--color-cream);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-}
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }

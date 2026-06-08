@@ -1,11 +1,5 @@
 # What Limitations of LLMs Became Evident
 
-<!-- Prompt: What limitations of LLMs became evident to you? -->
-
-*Write your reflection here. Consider: what kinds of problems did LLMs handle poorly? Where did pattern-matching break down? What did the midterm analytical problems reveal about the gaps between fluency and reasoning?*
-
----
-
 Though an incredibly powerful tool, LLMs struggled with providing deterministic answers - and that makes sense, because by design they are not deterministic. However, these tokenization issues "confuse" the model, rapidly compounding its error. 
 
 They are also prone to overfitting, as is the case of providing a classical problem, but with a twist. The LLM might not be able to fully reason its response because it was not trained on the twist, but on the original, untouched problem. 

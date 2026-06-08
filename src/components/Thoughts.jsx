@@ -9,16 +9,17 @@ function Thoughts() {
     <section
       id="thoughts"
       ref={ref}
-      className={`py-20 px-6 max-w-6xl mx-auto transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      className={`py-24 px-6 max-w-5xl mx-auto transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
-      <h2 className="font-heading text-3xl text-cream mb-12 text-center">
+      <SectionLabel>Reflections</SectionLabel>
+      <h2 className="font-heading text-2xl sm:text-3xl font-bold text-text mb-12">
         Thoughts
       </h2>
 
       {thoughts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {thoughts.map((thought) => (
             <ThoughtCard
               key={thought.id}
@@ -32,11 +33,17 @@ function Thoughts() {
           ))}
         </div>
       ) : (
-        <p className="text-center text-cream-light">
-          No thoughts to display yet. Check back soon!
-        </p>
+        <p className="text-sm text-muted text-center py-12">No reflections yet.</p>
       )}
     </section>
+  );
+}
+
+function SectionLabel({ children }) {
+  return (
+    <p className="text-xs font-semibold text-accent uppercase tracking-widest font-mono mb-2">
+      {children}
+    </p>
   );
 }
 

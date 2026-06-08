@@ -1,14 +1,15 @@
 function Footer() {
   const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-navy-dark py-8 text-center">
-      <p className="text-cream-light text-sm">
-        &copy; {year} All rights reserved.
-      </p>
-      <p className="text-gold text-xs mt-2">
-         Hecho con ❤️ en 🇵🇷
-      </p>
+    <footer className="py-8 px-6 border-t border-border bg-surface">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p className="text-xs text-muted">
+          © {year} Carla N. Pérez. All rights reserved.
+        </p>
+        <p className="text-xs text-muted">
+          Hecho con ❤️ en 🇵🇷 · Built with React & Tailwind
+        </p>
+      </div>
     </footer>
   );
 }

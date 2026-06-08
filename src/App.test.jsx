@@ -48,11 +48,11 @@ describe('App', () => {
     expect(main).toBeTruthy();
   });
 
-  it('applies dark theme classes', () => {
+  it('applies light theme classes', () => {
     const { container } = render(<App />);
     const wrapper = container.firstChild;
-    expect(wrapper.className).toContain('bg-navy');
-    expect(wrapper.className).toContain('text-cream');
+    expect(wrapper.className).toContain('bg-bg');
+    expect(wrapper.className).toContain('text-text');
     expect(wrapper.className).toContain('min-h-screen');
   });
 

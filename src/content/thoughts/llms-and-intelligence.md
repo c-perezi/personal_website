@@ -1,11 +1,5 @@
 # How My View of AI as "Intelligence" Changed
 
-<!-- Prompt: How did your view of AI as "intelligence" change after studying and using LLMs? -->
-
-*Write your reflection here. Consider: before this course, how did you define intelligence? After working with LLMs hands-on and studying them analytically — how has that definition shifted? What surprised you most?*
-
----
-
 Before this course, I found it hard to concretely define intelligence, and one of the first forums precisely asked us to do so. I could say that intelligence was a multi-dimensional skill, including but not limited to academic, emotional, social, and even physical domains. What was definitely true is that I had not yet come up with a concensus on the topic. 
 
 The question of intelligence after working hands-on with LLMs and most importantly analyzing them has not yet been answered has provoked deep reflection. On one hand, there is _something_ clearly "intelligent" about LLMs. They are able to reason, and so long as they have been trained correctly, provide generally good results - much like us humans. 

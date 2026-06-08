@@ -29,7 +29,7 @@ describe("ProjectCard", () => {
   it("renders external link with target and rel when link is provided", () => {
     render(<ProjectCard {...baseProps} link="https://example.com" />);
 
-    const link = screen.getByRole("link", { name: /view project/i });
+    const link = screen.getByRole("link", { name: /view on github/i });
     expect(link).toHaveAttribute("href", "https://example.com");
     expect(link).toHaveAttribute("target", "_blank");
     expect(link).toHaveAttribute("rel", "noopener noreferrer");

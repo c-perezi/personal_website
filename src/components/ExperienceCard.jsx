@@ -1,18 +1,22 @@
 function ExperienceCard({ company, role, period, description, technologies }) {
   return (
-    <article className="bg-navy-dark rounded-lg p-6">
-      <h3 className="font-heading text-orange text-lg font-semibold mb-1">
-        {company}
-      </h3>
-      <p className="text-cream font-medium mb-1">{role}</p>
-      <p className="text-gold text-sm mb-3">{period}</p>
-      <p className="text-cream-light text-sm mb-4">{description}</p>
-      {technologies && technologies.length > 0 && (
-        <div className="flex flex-wrap gap-2">
+    <article className="bg-surface rounded-xl border border-border p-6">
+      <div className="flex items-start justify-between gap-4 mb-1 flex-wrap">
+        <h3 className="font-heading text-base font-semibold text-text leading-snug">
+          {company}
+        </h3>
+        <span className="text-xs font-mono text-muted whitespace-nowrap shrink-0 mt-0.5">
+          {period}
+        </span>
+      </div>
+      <p className="text-sm font-medium text-accent mb-3">{role}</p>
+      <p className="text-sm text-muted leading-relaxed mb-4">{description}</p>
+      {technologies?.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs bg-navy text-gold px-2 py-1 rounded"
+              className="text-xs font-mono px-2 py-0.5 rounded-md bg-subtle border border-border text-muted"
             >
               {tech}
             </span>

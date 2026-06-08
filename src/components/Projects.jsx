@@ -6,7 +6,7 @@ import useScrollAnimation from "../hooks/useScrollAnimation";
 
 const allTabs = [
   { key: "devops", label: "DevOps" },
-  { key: "ai", label: "AI" },
+  { key: "ai",     label: "AI"     },
 ];
 
 function Projects() {
@@ -21,32 +21,38 @@ function Projects() {
     <section
       id="projects"
       ref={ref}
-      className={`py-20 px-6 max-w-6xl mx-auto transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      className={`py-24 px-6 max-w-5xl mx-auto transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
-      <h2 className="font-heading text-3xl text-cream mb-8 text-center">
-        Projects
-      </h2>
+      <SectionLabel>Work</SectionLabel>
+      <div className="flex items-end justify-between mb-8 gap-4 flex-wrap">
+        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-text">
+          Projects
+        </h2>
 
-      <div className="flex justify-center gap-4 mb-10">
-        {tabs.map((tab) => (
-          <button
-            key={tab.key}
-            onClick={() => setActiveTab(tab.key)}
-            className={`px-5 py-2 rounded font-heading text-sm transition-colors duration-200 ${
-              activeTab === tab.key
-                ? "bg-orange text-navy-dark"
-                : "bg-navy text-cream hover:text-orange"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+        {/* Tab pills */}
+        {tabs.length > 1 && (
+          <div className="flex gap-1 p-1 rounded-lg bg-subtle border border-border">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors duration-150 ${
+                  activeTab === tab.key
+                    ? "bg-surface text-text shadow-sm border border-border"
+                    : "text-muted hover:text-text"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {filtered.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filtered.map((project) => (
             <ProjectCard
               key={project.id}
@@ -55,15 +61,22 @@ function Projects() {
               tags={project.tags}
               link={project.link}
               image={project.image}
+              wip={project.wip}
             />
           ))}
         </div>
       ) : (
-        <p className="text-center text-cream-light">
-          No projects to display yet. Check back soon!
-        </p>
+        <p className="text-sm text-muted text-center py-12">No projects to display yet.</p>
       )}
     </section>
+  );
+}
+
+function SectionLabel({ children }) {
+  return (
+    <p className="text-xs font-semibold text-accent uppercase tracking-widest font-mono mb-2">
+      {children}
+    </p>
   );
 }
 

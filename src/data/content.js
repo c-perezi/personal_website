@@ -30,6 +30,25 @@ export const skills = [
 // Projects
 export const projects = [
   {
+    id: "proj-wip-1",
+    title: "Cloud Platform Automation Toolkit",
+    description:
+      "A collection of reusable Terraform modules and GitLab CI pipeline templates for provisioning and managing enterprise AWS environments. Work in progress.",
+    category: "devops",
+    tags: ["Terraform", "GitLab CI", "AWS", "IaC"],
+    wip: true,
+  },
+  {
+    id: "proj-wip-2",
+    title: "Jenkins Audit Trail → AWS S3",
+    description:
+      "Extending the Jenkins Audit Trail plugin to stream audit events directly to an AWS S3 bucket, enabling durable, centralized compliance logging outside of Jenkins.",
+    category: "devops",
+    tags: ["Java", "Jenkins", "AWS S3", "Audit"],
+    link: "https://plugins.jenkins.io/audit-trail/",
+    wip: true,
+  },
+  {
     id: "proj-5",
     title: "Python vs NumPy Performance Benchmarking",
     description:
@@ -183,7 +202,7 @@ export const navLinks = [
 ];
 // Feature flags
 export const featureFlags = {
-  showDevOpsProjects: false,
+  showDevOpsProjects: true,
   showThoughts: true,
 };
 

@@ -7,7 +7,15 @@ function Footer() {
           © {year} Carla N. Pérez. All rights reserved.
         </p>
         <p className="text-xs text-muted">
-          Hecho con ❤️ en 🇵🇷 · Built with React & Tailwind
+          Hecho con ❤️ en 🇵🇷 · Built with React & Tailwind · GitHub Page partially generated with{" "}
+          <a
+            href="https://kiro.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            Kiro
+          </a>
         </p>
       </div>
     </footer>
